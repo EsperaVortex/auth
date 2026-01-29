@@ -84,7 +84,6 @@ const deleteImage = async (req, res) => {
     try {
         const getIdImgDelete = req.params.id;
         const userId = req.userInfo.userId;
-
         const image = await Image.findById(getIdImgDelete);
 
         if (!image) {
